@@ -16,16 +16,19 @@ body {
   padding: 0 1rem;
 }
 
-ul {
-  list-style: none;
-}
-
 .links > li {
   display: inline-block;
   background: rgb(61, 61, 61);
   color: white;
-  padding: 0.5rem;
+  padding: 1rem;
   position: relative;
+  cursor: pointer;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.links > li:hover {
+  background: rgb(145, 46, 46);
 }
 
 .dropList {
@@ -35,10 +38,33 @@ ul {
 
 .active {
   display: block;
-  background: rgb(61, 61, 61);
+  background: rgb(145, 46, 46);
   color: white;
-  padding: 0.5rem;
   width: 100%;
+  top: 100%;
   left: 0;
   z-index: 1;
+  opacity: 0;
+  animation: active 0.3s ease forwards;
+}
+
+@keyframes active {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.active li {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.active li:hover {
+  background: rgb(61, 61, 61);
 }
