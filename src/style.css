@@ -5,7 +5,7 @@
 }
 
 body {
-  background: rgb(7, 7, 7);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
@@ -20,9 +20,25 @@ ul {
   list-style: none;
 }
 
-li {
+.links > li {
   display: inline-block;
   background: rgb(61, 61, 61);
   color: white;
   padding: 0.5rem;
+  position: relative;
+}
+
+.dropList {
+  display: none;
+  position: absolute;
+}
+
+.active {
+  display: block;
+  background: rgb(61, 61, 61);
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  left: 0;
+  z-index: 1;
 }
